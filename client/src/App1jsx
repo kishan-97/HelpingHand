@@ -1,0 +1,12 @@
+import React from 'react';
+import { useEffect } from 'react';
+import './index.css';
+import { useState } from 'react';
+
+ time=new date.
+  const[time,settime]=useState(null);
+  return( 
+    
+    );
+
+export default Weather;

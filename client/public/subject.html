@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+.scraper{
+  text-align: left;
+  height:10rem;
+  width:10rem;
+  margin-top: 2rem;
+
+}
+.hh1{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: blue;
+  font-size: 6rem;
+  text-align: center;
+}
+.firediv
+{
+  height:10rem;
+  display: inline-block;
+  display:flex;
+  
+
+}
+.firediv2{
+  display: inline;
+  text-align: center;
+  padding-left: 25rem;
+}
+.firediv3{
+  text-align: right;
+}
+.rating {
+  display: inline-block;
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  font-size: 50px;
+}
+
+.rating label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  cursor: pointer;
+}
+
+.rating label:last-child {
+  position: static;
+}
+
+.rating label:nth-child(1) {
+  z-index: 5;
+}
+
+.rating label:nth-child(2) {
+  z-index: 4;
+}
+
+.rating label:nth-child(3) {
+  z-index: 3;
+}
+
+.rating label:nth-child(4) {
+  z-index: 2;
+}
+
+.rating label:nth-child(5) {
+  z-index: 1;
+}
+
+.rating label input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.rating label .icon {
+  float: left;
+  color: transparent;
+}
+
+.rating label:last-child .icon {
+  color: #000;
+}
+
+.rating:not(:hover) label input:checked ~ .icon,
+.rating:hover label:hover input ~ .icon {
+  color: #09f;
+}
+
+.rating label input:focus:not(:checked) ~ .icon:last-child {
+  color: #000;
+  text-shadow: 0 0 5px #09f;
+}
+.socialmedia{
+  background-color:darkorchid;
+  height: 10rem;
+  margin-top: 3rem;
+  display: block;
+  object-fit: cover;
+
+}
+    </style>
+
+    <script>
+        $(':radio').change(function() {
+  console.log('New star rating: ' + this.value);
+});
+    </script>
+</head>
+<body>
+    <div class="firediv"><div>
+        <img  src="skyscraper.jpeg" class="scraper" alt="Image will be shown to u early"/></div>
+      <div class="firediv2">  <h1 class="hh1">Skyscraper Study</h1></div>
+      </div>
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+          <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
+          <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+      </div>
+      
+      //star rating by 
+      <form class="rating">
+        <label>
+          <input type="radio" name="stars" value="1" />
+          <span class="icon">★</span>
+        </label>
+        <label>
+          <input type="radio" name="stars" value="2" />
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+        </label>
+        <label>
+          <input type="radio" name="stars" value="3" />
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+          <span class="icon">★</span>   
+        </label>
+        <label>
+          <input type="radio" name="stars" value="4" />
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+        </label>
+        <label>
+          <input type="radio" name="stars" value="5" />
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+        </label>
+        <div class="socialmedia">
+              <h3>About us</h3>
+                <h3>contact us</h3>
+                <a href="https://www.facebook.com/atul.kesharwani.756/"><img src="fb1.png" style=" height:1rem,width:1rem "/></a>
+                <a href="https://www.instagram.com/kesharwani1054/"><img src="insta2.png" style=" height:1rem,width:1rem "/></a>
+                <a href="https://twitter.com/kesharwani_atul"><img src="twitter.png" style=" height:1rem,width:1rem "/></a>
+                <h4>for Email Support-kesharwaniatul9935@gmail.com</h4>
+        </div>
+          
+      </form>
+</body>
